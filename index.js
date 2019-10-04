@@ -34,7 +34,6 @@ class EbayUISwitch extends HTMLElement {
                 height: 24px;
                 position: relative;
                 text-indent: 100%;
-                -webkit-transition: left 0.15s ease-out 0s;
                 transition: left 0.15s ease-out 0s;
                 width: 40px;
               }
@@ -126,6 +125,7 @@ class EbayUISwitch extends HTMLElement {
     }
 
     connectedCallback(e) {
+        this.removeAttribute('placeholder');
         this._focusableElement.addEventListener('click', this._onClickListener);
         this._focusableElement.addEventListener('keydown', this._onKeyDownListener);
     }

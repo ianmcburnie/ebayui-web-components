@@ -142,9 +142,19 @@ class EbayUISwitch extends HTMLElement {
     }
 
     _onKeyDown(e) {
-        if (e.keyCode === 32) {
-            e.preventDefault();
-            this.toggle();
+        switch (e.keyCode) {
+            case 32:
+                e.preventDefault();
+                this.toggle();
+                break;
+            case 37:
+                this.checked = false;
+                break;
+            case 39:
+                this.checked = true;
+                break;
+            default:
+                break;
         }
     }
 

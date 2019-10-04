@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+    <head>
+        <title>ebayui-web-components</title>
+        <script src="index.js"></script>
+        <script>
+            window.onload = function(e) {
+                const switchEls = document.querySelectorAll('ebayui-switch');
+                switchEls.forEach(function(e, i) {
+                    console.log(e, i);
+                });
+            };
+        </script>
+        <style>
+            header,
+            main {
+                text-align: center;
+            }
+            ul {
+                list-style-type: none;
+                margin: 0 auto;
+                max-width: 320px;
+                padding: 0;
+            }
+            li {
+                align-items: center;
+                border: 1px solid #eee;
+                box-sizing: border-box;
+                display: flex;
+                margin: 4px 0;
+                padding: 4px 8px;
+            }
+            ebayui-switch {
+                margin-left: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>ebayui-web-components</h1>
+        </header>
+        <main>
+            <h2>ebayui-switch</h2>
+            <ul>
+                <li>
+                    <span id="label1">ebayui-switch 1</span>
+                    <ebayui-switch label="label1"></ebayui-switch>
+                </li>
+                <li>
+                    <span id="label2">ebayui-switch 2</span>
+                    <ebayui-switch label="label2" checked></ebayui-switch>
+                </li>
+                <li>
+                    <span id="label3">ebayui-switch 3</span>
+                    <ebayui-switch label="label3"></ebayui-switch>
+                </li>
+            </ui>
+        </main>
+    </body>
+</html>

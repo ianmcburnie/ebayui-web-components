@@ -1,70 +1,58 @@
 <!doctype html>
 <html>
     <head>
-        <title>ebayui-web-components</title>
+        <title>ebayui-switch</title>
+        <script src="ebayui-switch-element.js"></script>
+        <script src="ebayui-switch-class.js"></script>
         <script src="index.js"></script>
-        <script>
-            window.onload = function(e) {
-                const switchEls = document.querySelectorAll('ebayui-switch');
-                switchEls.forEach(function(e, i) {
-                    console.log(e, i);
-                });
-            };
-        </script>
-        <style>
-            header,
-            main {
-                text-align: center;
-            }
-            ul {
-                list-style-type: none;
-                margin: 0 auto;
-                max-width: 320px;
-                padding: 0;
-            }
-            li {
-                align-items: center;
-                border: 1px solid #eee;
-                box-sizing: border-box;
-                display: flex;
-                margin: 4px 0;
-                padding: 4px 8px;
-            }
-            ebayui-switch {
-                margin-left: auto;
-            }
-            ebayui-switch[placeholder="true"] {
-                align-items: center;
-                display: inline-flex;
-                height: 40px;
-            }
-            ebayui-switch[placeholder="true"]::after {
-                background-color: #eee;
-                border-radius: 400px;
-                content: '';
-                height: 24px;
-                width: 40px;
-            }
-        </style>
+        <link href="index.css" rel="stylesheet" />
+        <link href="ebayui-switch-class.css" rel="stylesheet" />
+        <link href="ebayui-switch-placeholder.css" rel="stylesheet" />
     </head>
     <body>
         <header>
-            <h1>ebayui-web-components</h1>
+            <h1>ebayui-switch</h1>
+            <p>Try disabling JavaScript in the browser!</p>
         </header>
         <main>
-            <h2>ebayui-switch</h2>
+            <h2>Web Component + Placeholder</h2>
             <ul>
                 <li>
                     <span id="label1">ebayui-switch 1</span>
-                    <ebayui-switch label="label1" placeholder="true"></ebayui-switch>
+                    <ebayui-switch labelledby="label1" placeholder="true"></ebayui-switch>
                 </li>
                 <li>
                     <span id="label2">ebayui-switch 2</span>
-                    <ebayui-switch label="label2" placeholder="true" checked></ebayui-switch>
+                    <ebayui-switch labelledby="label2" placeholder="true" checked></ebayui-switch>
                 </li>
                 <li>
                     <span id="label3">ebayui-switch 3</span>
-                    <ebayui-switch label="label3" placeholder="true"></ebayui-switch>
+                    <ebayui-switch labelledby="label3" placeholder="true"></ebayui-switch>
+                </li>
+            </ui>
+
+            <h2>SSR + JavaScript</h2>
+            <ul>
+                <li>
+                    <span id="label4">ebayui-switch 4</span>
+                    <span class="ebayui-switch">
+                      <span class="ebayui-switch__control" role="switch" tabindex="0" aria-checked="false" aria-labelledby="label4"></span>
+                      <span class="ebayui-switch__button"></span>
+                    </span>
+                </li>
+                <li>
+                    <span id="label5">ebayui-switch 5</span>
+                    <span class="ebayui-switch">
+                      <span class="ebayui-switch__control" role="switch" tabindex="0" aria-checked="true" aria-labelledby="label5"></span>
+                      <span class="ebayui-switch__button"></span>
+                    </span>
+                </li>
+                <li>
+                    <span id="label6">ebayui-switch 6</span>
+                    <span class="ebayui-switch">
+                      <span class="ebayui-switch__control" role="switch" tabindex="0" aria-checked="false" aria-labelledby="label6"></span>
+                      <span class="ebayui-switch__button"></span>
+                    </span>
                 </li>
             </ui>
         </main>
